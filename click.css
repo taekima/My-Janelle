@@ -1,0 +1,65 @@
+#heart {
+    position:relative; 
+    width:100px; 
+    height:200px;
+    margin-top:200px; /* leave some space above */
+    margin-left: 590px;
+    animation: pulse 1.5s ease infinite;
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+
+#heart:before {
+    position: absolute; 
+    content: ""; 
+    left: 100px; 
+    top: 0; 
+    width: 100px; 
+    height: 160px; 
+    background: red; /* assign a nice red color */
+    border-radius: 40px 40px 0 0; /* make the top edge round */ 
+}
+
+
+#heart:before {
+    -webkit-transform: rotate(-45deg); /* 45 degrees rotation counter clockwise */
+    transform: rotate(-45deg); 
+    -webkit-transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
+    transform-origin: 0 100%;
+}
+
+
+#heart:after {
+    position: absolute; 
+    content: ""; 
+    left: 0px; 
+    top: 0; 
+    width: 100px; 
+    height: 160px; 
+    background: red; /* assign a nice red color */
+    border-radius: 40px 40px 0 0; /* make the top edge round */ 
+}
+
+
+#heart:after {
+    -webkit-transform: rotate(45deg); /* 45 degrees rotation counter clockwise */
+    transform: rotate(45deg); 
+    -webkit-transform-origin: 100% 100%; /* Rotate it around the bottom-left corner */
+    transform-origin: 100% 100%;
+}
+
+
+a {
+    margin-left: 650px;
+    background: rgb(216, 130, 238);
+    color: white;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-radius: 15px;
+}
